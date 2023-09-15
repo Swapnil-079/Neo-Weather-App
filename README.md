@@ -6,7 +6,7 @@ Welcome to the Neo-Weather-App repository! This modern weather website provides 
 
 ## Demo
 
-You can check out a live demo of the website [(https://weather-app-neo.netlify.app]/.
+You can check out a live demo of the website [(https://weather-app-neo.netlify.app)].
 
 ## Features
 
