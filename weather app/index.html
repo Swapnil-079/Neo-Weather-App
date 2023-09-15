@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="style.css" />
+    <!-- Goggle Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="preloader"></div>
+    <div class="mainContainer">
+      <!-- left section -->
+      <main class="leftSection">
+        <!-- top section  -->
+        <div class="topSection">
+          <img src="search_icon.png" class="search_icon" />
+          <form class="form">
+            <input
+              type="text"
+              placeholder="Enter the location"
+              class="searchBar"
+            />
+        </form>
+        <p class="errorText"></p>
+        </div>
+         <!-- middle section  -->
+        <div class="middleSection">
+          <div class="details">
+            <div class="details1">
+              <div class="locationAndText">
+                <img src="location.ico" class="location" />
+                <p class="locationText">Dhanbad</p>
+              </div>
+              <p class="timeText">Today <span class="time"> 00:32</span></p>
+            </div>
+
+            <div class="details2">
+              <p class="currTemp">24°</p>
+              <p class="currWeather">Mostly Clear</p>
+            </div>
+
+            <div class="details3">
+              <div class="pressureDetails">
+                <img class="pressureIcon" src="pressure.png" />
+                <p class="pressureValue">720hpa</p>
+              </div>
+              <div class="rainDetails">
+                <img class="rainIcon" src="rain chance.png" />
+                <p class="rainValue">24%</p>
+              </div>
+              <div class="windDetails">
+                <img class="windIcon" src="wind.png" />
+                <p class="windValue">12km/h</p>
+              </div>
+            </div>
+          </div>
+          <div class="temperature">
+            <p class="temperatureText">Temperature</p>
+            <div class="temperature-chart-Container">
+              <canvas class="temperature-chart"></canvas>
+              </div>
+          </div>
+        </div>
+         <!-- bottom section  -->
+        <div class="bottomSection">
+          <div class="tabs">
+            <div class="text">
+              <p class="line1 ">Wind</p>
+              <p class="line2">Today's wind speed</p>
+              <p class="line3 l3wind">12km/h</p>
+            </div>
+            <div class="chartContainer">
+              <canvas class="windchart"></canvas>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="text">
+              <p class="line1">Rain Chance</p>
+              <p class="line2">Today's rain chance</p>
+              <p class="line3 l3rain">24%</p>
+            </div>
+            <div class="chartContainer">
+              <canvas class="rainchart"></canvas>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="text">
+              <p class="line1">Pressure</p>
+              <p class="line2">Today's Pressure</p>
+              <p class="line3 l3pressure">720hpa</p>
+            </div>
+            <div class="chartContainer">
+              <canvas class="pressurechart"></canvas>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="text">
+              <p class="line1">UV Index</p>
+              <p class="line2">Today's UV Index</p>
+              <p class="line3 l3uv">2</p>
+            </div>
+            <div class="chartContainer">
+              <canvas class="uvchart"></canvas>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- right section -->
+      <section class="rightSection">
+        <p class="currentDay">Today</p>
+        <div class="swiper mySwiper Cards-Container">
+          <div class="swiper-wrapper cards-wrapper">
+            <div class="swiper-slide cards-slide current">
+              <p class="card-time 0">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 0" />
+              <p class="card-temperature 0">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 1">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 1" />
+              <p class="card-temperature 1">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 2">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 2" />
+              <p class="card-temperature 2">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 3">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 3" />
+              <p class="card-temperature 3">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 4">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 4" />
+              <p class="card-temperature 4">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 5">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 5" />
+              <p class="card-temperature 5">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 6">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 6" />
+              <p class="card-temperature 6">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 7">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 7" />
+              <p class="card-temperature 7">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 8">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 8" />
+              <p class="card-temperature 8">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 9">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 9" />
+              <p class="card-temperature 9">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 10">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 10" />
+              <p class="card-temperature 10">12°</p>
+            </div>
+
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 11">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 12">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 13">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 14">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 15">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 16">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+            <div class="swiper-slide cards-slide">
+              <p class="card-time 17">Now</p>
+              <img src="pictures/cloudy-day.png" alt="" class="card-picture 11" />
+              <p class="card-temperature 11">12°</p>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <!-- <div class="swiper-button-prev"></div> -->
+          <div class="swiper-scrollbar"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="tab1">
+          <div class="feels-like">
+            <div class="feels-like-img-con">
+              <img
+                src="pictures/icons8-temperature-96 (1).png"
+                alt=""
+                class="feels-like-img"
+              />
+            </div>
+            <div class="feels-like-text-con">
+              <p class="feels-like-text">Feels Like</p>
+              <p class="feels-like-temp">26°</p>
+            </div>
+          </div>
+          <div class="humidity">
+            <div class="humidity-img-con">
+              <img
+                src="pictures/icons8-humidity-96.png"
+                alt=""
+                class="humidity-img"
+              />
+            </div>
+            <div class="humidity-text-con">
+              <p class="humidity-text">Humidity</p>
+              <p class="humidity-percent">25%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab2">
+          <div class="sunrise">
+            <div class="sunrise-img-con">
+              <img
+                src="pictures/icons8-sunrise-96.png"
+                alt=""
+                class="sunrise-img"
+              />
+            </div>
+            <div class="sunrise-text-con">
+              <p class="sunrise-text">Sunrise</p>
+              <p class="sunrise-time">5:00</p>
+            </div>
+          </div>
+          <div class="sunset">
+            <div class="sunset-img-con">
+              <img
+                src="pictures/icons8-sunset-96.png"
+                alt=""
+                class="sunset-img"
+              />
+            </div>
+            <div class="sunset-text-con">
+              <p class="sunset-text">Sunset</p>
+              <p class="sunset-time">18:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="day-1">
+          <div class="day-1-text">
+            <p class="day-1-text-line-1">Tomorrow</p>
+            <p class="day-1-text-line-2">17 Jul</p>
+          </div>
+          <div class="day-1-temp-con">
+            <p class="day-1-temp"><span class="day-1-temp-min"> 25 </span> /<span class="day-1-temp-max"> 32</span>°C</p>
+          </div>
+          <div class="day-1-img-con">
+            <img src="pictures/sunny.png" alt="" class="day-1-img" />
+          </div>
+        </div>
+        <div class="day-2">
+            <div class="day-2-text">
+                <p class="day-2-text-line-1">Tomorrow</p>
+                <p class="day-2-text-line-2">17 Jul</p>
+              </div>
+              <div class="day-2-temp-con">
+                <p class="day-2-temp"><span class="day-2-temp-min">25 </span>/<span class="day-2-temp-max"> 32</span>°C</p>
+              </div>
+              <div class="day-2-img-con">
+                <img src="pictures/sunny.png" alt="" class="day-2-img" />
+              </div>
+        </div>
+        <div class="day-3">
+            <div class="day-3-text">
+                <p class="day-3-text-line-1">Tomorrow</p>
+                <p class="day-3-text-line-2">17 Jul</p>
+              </div>
+              <div class="day-3-temp-con">
+                <p class="day-3-temp"><span class="day-3-temp-min">25 </span>/<span class="day-3-temp-max"> 32</span>°C</p>
+              </div>
+              <div class="day-3-img-con">
+                <img src="pictures/sunny.png" alt="" class="day-3-img" />
+              </div>
+        </div>
+        <div class="day-4">
+            <div class="day-4-text">
+                <p class="day-4-text-line-1">Tomorrow</p>
+                <p class="day-4-text-line-2">17 Jul</p>
+              </div>
+              <div class="day-4-temp-con">
+                <p class="day-4-temp"><span class="day-4-temp-min">25 </span>/<span class="day-4-temp-max"> 32</span>°C</p>
+              </div>
+              <div class="day-4-img-con">
+                <img src="pictures/sunny.png" alt="" class="day-4-img" />
+              </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="swipper.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
